@@ -1,0 +1,18 @@
+/* --------------------------------------------------------------------- */
+/* Additonal CSS Changes
+/* --------------------------------------------------------------------- */
+
+
+.team-member {
+	z-index: 3;
+}
+
+.team-member .img-container {
+	z-index: 4;
+}
+
+.parallax.imagediv {
+	background-image: url("../images/banner/banner-background-04.jpg");
+	background-size: cover;
+	height: 300px;
+}
