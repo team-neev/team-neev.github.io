@@ -7,3 +7,4 @@ docker-compose up -d
 ```
 
 
+`scripts/theme.settings.js` is where all JS lives for this site. (non-libraries)
