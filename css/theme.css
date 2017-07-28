@@ -168,7 +168,7 @@ body {
 }
 
 #main-navigation a:hover, #main-navigation a.active {
-    text-decoration: line-through;
+    /*text-decoration: line-through;*/
 }
 
 #main-navigation a.active {
@@ -834,6 +834,6 @@ div.map-popup p:last-child {
 }
 
 #page-footer .bottom-line {
-    text-align: center; 
+    text-align: center;
     font-size: 0.9em;
 }

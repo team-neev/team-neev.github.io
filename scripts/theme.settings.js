@@ -47,7 +47,7 @@
     if(parallaxSections.length) // CHECK IF ELEMENT EXIST
     {
         parallaxSections.parallax({
-        speed :	0.5
+        speed :	1.0
         });
     }
 
