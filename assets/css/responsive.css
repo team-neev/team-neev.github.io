@@ -1,0 +1,102 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+	.single-progressbar {
+	  margin: 0 0 43px;
+	}
+	.single-progressbar:last-child {
+	  margin-bottom: 0;
+	}  
+	    
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	.single-slider-text h1 {
+	  font-size: 40px;
+	}
+	.about-us h3 {
+	  margin-top: 50px;
+	}
+	.cta-area h3 {
+	  font-size: 25px;
+	}
+	.single-service h3 {
+	  font-size: 18px;
+	  font-weight: 500;
+	}
+	.single-portfolio {
+	  height: 220px;
+	}
+	.row.portfilo-list .col-sm-4:nth-child(2) .single-portfolio, .row.portfilo-list .col-sm-4:nth-child(7) .single-portfolio, .row.portfilo-list .col-sm-4:nth-child(5) .single-portfolio {
+	  height: 290px;
+	}
+	.row.portfilo-list .col-sm-4:nth-child(3) .single-portfolio, .row.portfilo-list .col-sm-4:nth-child(4) .single-portfolio, .row.portfilo-list .col-sm-4:nth-child(8) .single-portfolio {
+	  height: 290px;
+	}
+	.single-member {
+	  margin: 15px 0;
+	}
+	.single-blog {
+	  margin: 15px 0;
+	}
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+	.responsive-menu{
+		display: block;
+	}
+	.mainmanu{
+		display: none;
+	}
+	.single-slider-text h1 {
+	  font-size: 14px;
+	}
+	.single-slider-text p {
+	    font-size: 12px;
+	    line-height: 24px;
+	    margin-top: 20px;
+	}
+	.single-slider-text .borderd-btn {
+	    font-size: 12px;
+	    padding: 5px 10px;
+	}
+	.homepage-slide .owl-nav div{
+		display: none;
+		opacity: 0;
+		transition: 0.4s;
+	}
+	.homepage-slide:hover.homepage-slide .owl-nav div{
+		display: block;
+		opacity: 1;
+	}
+	.about-us h3 {
+	  margin-top: 50px;
+	}
+	.cta-area {
+	  text-align: center;
+	}
+	.cta-area h3 {
+	  font-size: 18px;
+	  margin-bottom: 22px;
+	}
+	.cta-area .text-right {
+	  text-align: center;
+	}
+	.single-member {
+	  margin: 30px 0;
+	}
+	.single-member img {
+	  width: 100%;
+	}
+	.single-blog {
+	  margin: 15px 0;
+	}
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	.single-slider-text h1 {
+	  font-size: 25px;
+	}
+	.single-slider-text p {
+	  font-size: 18px;
+	}
+}
