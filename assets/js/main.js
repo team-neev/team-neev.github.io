@@ -6,8 +6,8 @@
 			/* =============================================
 					Portfolio JS
 			===============================================*/
-			$(".portfolio-manu li").on("click", function(){
-				$(".portfolio-manu li").removeClass("active");
+			$(".expertise-menu li").on("click", function(){
+				$(".expertise-menu li").removeClass("active");
 				$(this).addClass("active");
 				var selsctor = $(this).attr('data-filter');
 		           $(".portfilo-list").isotope({
@@ -95,30 +95,6 @@
 	        	gallery:{
 	        		enabled:true
 	        	}
-	        });
-			/* =============================================
-					Main Slide JS
-			===============================================*/
-	        $(".homepage-slide").owlCarousel({
-	            items:1,
-	            loop:true,
-	            dots:true,
-	            autoplay:true,
-	            nav:true,
-	            navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
-	        });
-
-	        /* =============================================
-					Main Slide animation JS
-			===============================================*/
-	        $(".homepage-slide").on("translate.owl.carousel", function(){
-	            $(".single-slider-text h1, .single-slider-text p").removeClass("animated fadeInDown").css("opacity", "0");
-	            $(".single-slider-text .borderd-btn").removeClass("animated fadeInUp").css("opacity", "0");
-	        });
-	        
-	        $(".homepage-slide").on("translated.owl.carousel", function(){
-	            $(".single-slider-text h1, .single-slider-text p").addClass("animated fadeInDown").css("opacity", "1");
-	            $(".single-slider-text .borderd-btn").addClass("animated fadeInUp").css("opacity", "1");
 	        });
 
 	        /* =============================================
