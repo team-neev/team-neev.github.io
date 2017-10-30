@@ -276,7 +276,7 @@ a:focus { text-decoration: none }
     height: 100vh;
     position: relative;
     z-index: 1;
-    background-color: ##ddd;
+    background-color: #ddd;
 }
 .single-slide-bg::after {
     background: #000 none repeat scroll 0 0;
@@ -525,12 +525,12 @@ a:focus { text-decoration: none }
 .industry-icon {
     font-size: 40px;
     margin-bottom: 20px;
-    transition: all 0.4s ease 0
+    transition: all 0.4s ease 0;
 }
 .single-industry h3 {
     font-size: 20px;
     font-weight: 300;
-    transition: all 0.4s ease 0
+    transition: all 0.4s ease 0;
 }
 .single-industry p {
     color: white;
