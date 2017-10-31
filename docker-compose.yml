@@ -1,11 +1,11 @@
-version: '2'
+version: '3'
 
 services:
-      website:
-          ports:
-              - "80:80"
-          build: .
-          volumes:
-              - ./:/usr/share/nginx/html
+  website:
+    ports:
+      - "80:80"
+    build: .
+    volumes:
+      - ./:/usr/html
 
 
