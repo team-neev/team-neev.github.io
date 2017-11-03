@@ -110,40 +110,40 @@
 	        /* =============================================
 					Google Map JS
 			===============================================*/
-	        var center = {lat: 23.1664026, lng: 89.4945859};
-	        $('.google-map')
-		      .gmap3({
-		        center: center,
-		        zoom:14,
-		        mapTypeId: "shadeOfGrey", // to select it directly
-		        scrollwheel:false,
-		        mapTypeControlOptions: {
-		          mapTypeIds: [google.maps.MapTypeId.ROADMAP, "shadeOfGrey"]
-		        }
-		      })
-		      .marker({
-		        position: center,
-		        icon: 'http://maps.google.com/mapfiles/marker_green.png'
-		      })
-		      .styledmaptype(
-		        "shadeOfGrey",
-		        [
-		          {"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},
-		          {"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},
-		          {"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
-		          {"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#F0DF3C"},{"lightness":20}]},
-		          {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#F0DF3C"},{"lightness":17},{"weight":1.2}]},
-		          {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#E9E9E9"},{"lightness":20}]},
-		          {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#C5C5C5"},{"lightness":21}]},
-		          {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},
-		          {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},
-		          {"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},
-		          {"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},
-		          {"featureType":"transit","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":19}]},
-		          {"featureType":"water","elementType":"geometry","stylers":[{"color":"#D9D9D9"},{"lightness":17}]}
-		        ],
-		        {name: "Google Map"}
-		      );
+	        // var center = {lat: 23.1664026, lng: 89.4945859};
+	        // $('.google-map')
+		     //  .gmap3({
+		     //    center: center,
+		     //    zoom:14,
+		     //    mapTypeId: "shadeOfGrey", // to select it directly
+		     //    scrollwheel:false,
+		     //    mapTypeControlOptions: {
+		     //      mapTypeIds: [google.maps.MapTypeId.ROADMAP, "shadeOfGrey"]
+		     //    }
+		     //  })
+		     //  .marker({
+		     //    position: center,
+		     //    icon: 'http://maps.google.com/mapfiles/marker_green.png'
+		     //  })
+		     //  .styledmaptype(
+		     //    "shadeOfGrey",
+		     //    [
+		     //      {"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},
+		     //      {"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},
+		     //      {"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+		     //      {"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#F0DF3C"},{"lightness":20}]},
+		     //      {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#F0DF3C"},{"lightness":17},{"weight":1.2}]},
+		     //      {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#E9E9E9"},{"lightness":20}]},
+		     //      {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#C5C5C5"},{"lightness":21}]},
+		     //      {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},
+		     //      {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},
+		     //      {"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},
+		     //      {"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},
+		     //      {"featureType":"transit","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":19}]},
+		     //      {"featureType":"water","elementType":"geometry","stylers":[{"color":"#D9D9D9"},{"lightness":17}]}
+		     //    ],
+		     //    {name: "Google Map"}
+		     //  );
 
 		    /* =============================================
 					Scroll to Top Click JS
@@ -153,6 +153,21 @@
 				return false;
 			} );
 
+			/* =============================================
+					Smooth scroll to anchor
+			===============================================*/
+			$('a[href^="#"]').on('click',function (e) {
+				e.preventDefault();
+
+				var target = this.hash;
+				var $target = $(target);
+
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 900, 'swing', function () {
+					window.location.hash = target;
+				});
+			});
 	});
 
 	jQuery(window).load(function(){
