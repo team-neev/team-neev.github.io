@@ -4,8 +4,17 @@ services:
   website:
     ports:
       - "80:80"
-    build: .
+    build:
+      context: .
+      dockerfile: docker/prod/Dockerfile
     volumes:
       - ./:/usr/html
 
-
+  dev:
+    ports:
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: docker/dev/Dockerfile
+    volumes:
+      - ./:/usr/html
