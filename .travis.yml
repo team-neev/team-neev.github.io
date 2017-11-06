@@ -13,8 +13,6 @@ before_install:
 
 script:
   - ./scripts/run.sh build-prod
-
-after_success:
   - test $TRAVIS_PULL_REQUEST == "false" && ./scripts/publish.sh
 
 env:

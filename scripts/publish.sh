@@ -3,9 +3,9 @@
 set -e
 set -x
 
-rootDir=$(dirname $(readlink -f $0))"/.."
+rootDir="$(cd "$(dirname "$0")/.." && pwd)"
 
-cd $rootDir/website/dist
+cd $rootDir/dist
 
 if [ -d ".git" ]; then
     rm -rf .git
