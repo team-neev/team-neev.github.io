@@ -13,7 +13,7 @@ before_install:
 
 script:
   - ./scripts/run.sh build-prod
-  - test $TRAVIS_PULL_REQUEST == "false" && sudo ./scripts/publish.sh
+  - test $TRAVIS_PULL_REQUEST == "false" && sudo chown -R $USER ./dist && ./scripts/publish.sh
 
 env:
   global:
