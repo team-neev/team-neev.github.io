@@ -1,11 +1,20 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-rootDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+set -e
+set -x
 
-if [ ! -d "${rootDir}/team-neev.github.io" ]; then
-    echo "Unable to locate the \"team-neev.github.io\" repo. Please clone it at the same dir level as the website repo."
-    exit 1
+rootDir=$(dirname $(readlink -f $0))"/.."
+
+cd $rootDir/website/dist
+
+if [ -d ".git" ]; then
+    rm -rf .git
 fi
 
-cd $rootDir
-rsync -av --delete --exclude README.md --exclude .gitignore ${rootDir}/website/dist/* ${rootDir}/team-neev.github.io/
+git init
+git config user.email 'team@team-neev.com'
+git config user.name 'Team Neev'
+git add .
+git commit -m "Build the website"
+
+git push --force --quiet "https://github.com/team-neev/team-neev.github.io.git" master:gh-pages

@@ -5,14 +5,21 @@ set -o pipefail
 
 COMMAND=${1:-"help"}
 
-function start() {
-    docker-compose up -d
-
-    echo " ---- Browse to http://localhost:80 --- "
+function build-prod() {
+    npm install
+    npm run build
 }
 
-function stop() {
-    docker-compose stop
+function build-dev() {
+    npm install
+}
+
+function start-dev() {
+    npm run server
+}
+
+function npm() {
+    docker run -it --rm -v $(pwd):/project -w /project -p 3000:3000 node:9 npm $@
 }
 
 function help() {

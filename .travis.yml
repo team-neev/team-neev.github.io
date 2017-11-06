@@ -1,0 +1,26 @@
+language: bash
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - source
+
+before_install:
+  - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
+
+before_script:
+  - docker-compose build website
+
+script:
+  - ./scripts/run.sh build-prod
+
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && ./scripts/publish.sh
+
+env:
+  global:
+    - secure: HOVBp5bnzsT1yAFbg8oQOcSE3+wrxVJy+UA1ZDaW3BQZpSIEwxslEoQcCSKfJcJQUDwlXXriYq5PUf6XXaX6JZoTBkpFrwIpqiYCgsOQwhMvZB79OR50B0giiOSwscW/jYcxzswRKbMCVBaUaR3LkO0RJBIg7RrJxU88bZAxouM3B2wPaO23cCEsqLkGz8V5vbj9femp66qKT2o9YoU367onCtFz4Uhc9dzn99iq5f3utqq1MhJMGPmBme4R1Rir/Auinf8GN+ZBOpXK7nTMoeS92qk9NyDHlr3IxTs66r56AY3Ngdh1Gq0yA2ebNLynsH8ZqDp831wFxs0gASqMHneoAhcwsVYnsrupD81NDPaAMpRvrEG7Le0ZdRxM3rgV0L/i76e3MyPmeLd+KNHzSYj5AKL7o/nyJjkytYM9Y3GzoRrJ77xE6CVZQlv+UZ46f48rhVZ5dVhsv+DH62W5Tozh3yu+VvAIcGB5ZhoGf56aMJOZJS6Ymt0sPR3ZRinFch+mpbW01D22g2LrRidzYNcBi1mDdgeOIid/QG5LmMiXR985MM6mdHQTC+nC4Y5nmjv6q20yvhiSF15ONsSiwt3sNLN5Nu8wzMNIxwx5CjBlAmo2E39EIxC0WkmjswQC/COFZJqLFBU01pGOTpYYKtv9TIV3CJTvAUZvx1QKoM8=
+
