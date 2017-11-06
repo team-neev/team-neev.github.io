@@ -11,9 +11,6 @@ branches:
 before_install:
   - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 
-before_script:
-  - docker-compose build website
-
 script:
   - ./scripts/run.sh build-prod
 
