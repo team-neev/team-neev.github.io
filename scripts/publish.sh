@@ -17,4 +17,4 @@ git config user.name 'Team Neev'
 git add .
 git commit -m "Build the website"
 
-git push --force --quiet "https://github.com/team-neev/team-neev.github.io.git" master:gh-pages
+git push --force --quiet "https://github.com/team-neev/team-neev.github.io.git" master:master
