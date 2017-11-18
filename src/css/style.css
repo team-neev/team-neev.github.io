@@ -610,6 +610,7 @@ a:focus { text-decoration: none }
     padding: 0;
 }
 .expertise-menu ul li {
+    border: 1px solid #00a8e7;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
