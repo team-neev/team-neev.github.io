@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/teamneev/website.git"
+    "url": "git@github.com:team-neev/team-neev.github.io.git"
   },
   "author": "Vítor Brandão <vitor@team-neev.com>",
   "private": true,
   "bugs": {
-    "url": "https://gitlab.com/teamneev/website/issues"
+    "url": "https://github.com/team-neev/team-neev.github.io"
   },
-  "homepage": "https://gitlab.com/teamneev/website#README.md"
+  "homepage": "https://team-neev.com"
 }
