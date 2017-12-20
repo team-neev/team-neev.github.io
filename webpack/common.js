@@ -21,6 +21,9 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
+            { from: 'src/CNAME' },
+        ]),
+        new CopyWebpackPlugin([
             { from: 'src/img', to: 'img' },
         ]),
         new CleanWebpackPlugin(['dist']),
