@@ -580,14 +580,7 @@ a:focus { text-decoration: none }
   transform: scaleX(0);
 
 }
-.row.portfilo-list .col-sm-4:nth-child(2) .single-portfolio,
-.row.portfilo-list .col-sm-4:nth-child(7) .single-portfolio,
-.row.portfilo-list .col-sm-4:nth-child(5) .single-portfolio{
-  height: 420px;
-}
-.row.portfilo-list .col-sm-4:nth-child(3) .single-portfolio,
-.row.portfilo-list .col-sm-4:nth-child(4) .single-portfolio,
-.row.portfilo-list .col-sm-4:nth-child(8) .single-portfolio{
+.row.portfilo-list .single-portfolio {
   height: 380px;
 }
 .single-portfolio:hover.single-portfolio::after{
@@ -679,10 +672,10 @@ a:focus { text-decoration: none }
     margin-top: 18px;
     text-align: center;
 }
-.single-member h3 span {
+.single-member span {
   display: block;
   font-size: 16px;
-  margin-top: 12px;
+  margin: 12px;
 }
 .single-member {
     border: 1px solid #f5f5f5;

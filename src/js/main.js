@@ -3,15 +3,6 @@
 
 	jQuery(document).ready(function($){
 
-			$(".expertise-menu li").on("click", function(){
-				$(".expertise-menu li").removeClass("active");
-				$(this).addClass("active");
-				var selsctor = $(this).attr('data-filter');
-		           $(".portfilo-list").isotope({
-		                filter: selsctor
-		           });
-			});
-
 			$("ul#navigation, .slicknav_nav").onePageNav();
 				jQuery(function($) {
 					$('ul#navigation a, .slicknav_nav a').bind('click', function(event) {
